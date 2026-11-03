@@ -85,6 +85,43 @@
       "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
     },
     {
+      "number": 8,
+      "title": "[FCN][钱包] 申购中钱包余额与分币种余额口径",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/8",
+      "state": "open",
+      "stateReason": null,
+      "status": "Verifying",
+      "priority": "P3",
+      "owners": [],
+      "scopes": [
+        "User UI"
+      ],
+      "labels": [
+        "bug",
+        "status/verifying",
+        "priority/P3",
+        "scope/user-ui",
+        "frontend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:12:24Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 7,
+      "search": "8 [fcn][钱包] 申购中钱包余额与分币种余额口径 bug status/verifying priority/p3 scope/user-ui frontend fcn  user ui"
+    },
+    {
       "number": 10,
       "title": "[Lab] 状态冲突样例",
       "url": "https://github.com/DataManagement666/issue-ops-lab/issues/10",
@@ -288,43 +325,6 @@
       "stale": false,
       "staleDays": 14,
       "search": "2 [fcn][资金流水] 部分历史 fcn 记录的变动后余额为空 bug status/partial priority/p2 owner/frontend owner/backend scope/user-ui frontend backend fcn backend frontend user ui"
-    },
-    {
-      "number": 8,
-      "title": "[FCN][钱包] 申购中钱包余额与分币种余额口径",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/8",
-      "state": "open",
-      "stateReason": null,
-      "status": "Partial",
-      "priority": "P3",
-      "owners": [],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/partial",
-        "priority/P3",
-        "scope/user-ui",
-        "frontend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": true,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:12:08Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 14,
-      "search": "8 [fcn][钱包] 申购中钱包余额与分币种余额口径 bug status/partial priority/p3 scope/user-ui frontend fcn  user ui"
     },
     {
       "number": 11,
