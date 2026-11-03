@@ -33,15 +33,16 @@
 | 原生字段 | — | Title、Labels、Parent issue、Sub-issues progress、Updated、Closed |
 
 **Project 是唯一真值**：不要在 issue 上加 `status/*`、`priority/*`、`owner/*`、`scope/*` 标签。
-标签只保留类型/领域（`bug`、`frontend`、`backend`、`admin`、`FCN`）。
+标签只保留类型/领域/处置（`bug`、`feature`、`task`、`frontend`、`backend`、`admin`、`FCN`、`verification`、`duplicate`、`invalid`、`wontfix`），以 `.github/labels.json` 为准。
 
 ## 怎么用
 
-1. 新 issue 进入仓库后，由 Project 的 **Auto-add to project** 自动加入；
+1. 新 issue 进入仓库后，把它 Add items 进 Project（**Auto-add to project** 尚未启用，启用后这一步自动完成）；
 2. 在 Project 里设置 Status / Priority / Next owner，必要时补 Waiting on / Scope / Next step；
 3. 验收通过：测试/验收方把 Status 改为 **Closed**，再关闭 issue；
 4. 验收不通过：Status 改回 **Partial** 或 **Verifying**，在 issue 评论写清缺口；
-5. 产品裁定不修复 / 重复 / 无效：Status 改为 **Not planned**，再关闭 issue；
+5. 产品裁定不修复 / 重复 / 无效：**先关闭 issue，再把 Status 改为 Not planned**
+   （顺序不能反：先设 Not planned 再关闭，会被第 6 步的 Item closed workflow 覆盖成 Closed）；
 6. issue 关闭后，Project 的 **Item closed** workflow 会把 Status 设为 Closed；
    issue 重新打开时，**没有 Item reopened workflow**，手动把 Status 改回 Open / Partial / Verifying。
 
@@ -75,6 +76,11 @@
 - **Item closed → Status Closed**：已启用，2026-11-03 用 #11 测试通过；
 - **Item reopened**：没有这个内置 workflow；重新打开时手动改回 Open / Partial / Verifying；
 - **Pull request merged**：已删除，避免合并自动把 Status 置为 Closed（合并 ≠ 验收通过）；
+- **Auto-close issue**：内置 workflow（新 Project 默认启用）——Status 变成配置的关闭值时自动关闭 issue；
+  本 Project 是否启用需在 Workflows UI 确认。启用后验收方把 Status 改为 Closed，issue 会自动关闭（第 3 步的「再关闭」自动完成）；
+- **仓库级 PR 合并自动关闭**：Settings → General → Issues 的
+  "Auto-close issues with merged linked pull requests" 是仓库默认行为——PR 描述带 `closes`/`fixes` 关键词，合并后自动关闭 issue，
+  再经 Item closed 把 Status 置为 Closed，绕过验收 gate。应保持关闭该设置，PR 描述禁用 `closes`/`fixes` 关键词；
 - 自定义 Action 需要 PAT / GitHub App：`GITHUB_TOKEN` 不能读写 Projects v2。
   当前只用 Projects 内置 workflow，不引入 PAT。
 
@@ -83,7 +89,11 @@
 - 关闭 #11 → Project Status 自动从 Open 变 Closed；
 - 重新打开 #11 → Status 保持 Closed，手动改回 Open（没有 Item reopened）；
 - `Pull request merged` workflow 已删除；
-- 5 个视图已通过 GraphQL 创建，筛选已设置；分组/排序需在 UI 里设置一次。
+- 5 个视图已通过 GraphQL 创建，筛选已设置；分组/排序需在 UI 里设置一次；
+- 6 个不在 manifest 的默认标签（`accessibility` / `documentation` / `enhancement` /
+  `good first issue` / `help wanted` / `question`）已删除，线上标签与 `.github/labels.json` 一致；
+- `Waiting on` / `Scope` 多选字段已存在于 Project，选项与文档一致
+  （注意：`gh project field-list` 不显示 multi-select 字段，查字段要用 GraphQL）。
 
 ## 本地
 

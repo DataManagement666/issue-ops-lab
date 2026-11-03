@@ -49,8 +49,13 @@ Project → 右上角 `...` → **Workflows**：
 - **Item closed**：已启用；测试通过（#11 关闭后 Status 自动变 Closed）
 - **Item reopened**：没有这个内置 workflow；重新打开时手动改回 Open / Partial / Verifying
 - **Pull request merged**：已通过 GraphQL 删除——合并不等于验收通过
-- **Auto-add sub-issues** / **Auto-close issue** / **Item added to project** / **Pull request linked to issue**：保留默认
+- **Auto-close issue**：Status 变成配置的关闭值时自动关闭 issue（新 Project 默认启用）；
+  本 Project 是否启用需在 UI 确认。启用后验收方把 Status 改为 Closed，issue 自动关闭
+- **Auto-add sub-issues** / **Item added to project** / **Pull request linked to issue**：保留默认
 - **Auto-archive**：按需
+- **仓库级 PR 合并自动关闭**：Settings → General → Issues 的
+  "Auto-close issues with merged linked pull requests" 保持关闭；PR 描述禁用 `closes`/`fixes` 关键词，
+  否则合并会直接关闭 issue 并经 Item closed 把 Status 置为 Closed，绕过验收 gate
 
 自定义 Action 需要 PAT / GitHub App；`GITHUB_TOKEN` 不能访问 Projects v2。
 
@@ -67,7 +72,8 @@ Open ──▶ Partial ──▶ Verifying ──▶ Closed
 - **Blocked**：`Next step` 写清被谁卡住；
 - **Verifying**：在 issue 评论或 `Evidence` 字段留下可复核证据；
 - **Closed**：测试/验收方移动；开发自测不算；
-- **Not planned**：产品结论写在 issue 评论，然后关闭。
+- **Not planned**：产品结论写在 issue 评论；**先关闭 issue，再把 Status 改为 Not planned**
+  （先设 Not planned 再关闭，会被 Item closed 覆盖成 Closed）。
 
 ## 5. 迁移到另一个仓库 / org
 
@@ -89,6 +95,9 @@ scripts/lib/github.mjs
 docs/PROJECT.md
 ```
 
+复制后把 `.github/ISSUE_TEMPLATE/bug.yml` 和 `config.yml` 里硬编码的 Project URL
+（`https://github.com/users/DataManagement666/projects/1`）替换成新 Project 的地址。
+
 不要在目标仓库恢复 `status/*`、`priority/*`、`owner/*`、`scope/*`、`verified` 标签；
 状态/优先级/owner/scope 只放在 Project 字段里。
 
@@ -109,7 +118,10 @@ docs/PROJECT.md
 - 2026-11-03：关闭 #11 → Project Status 自动从 Open 变 Closed（Item closed workflow）；
 - 重新打开 #11 → Status 保持 Closed，手动改回 Open（没有 Item reopened workflow）；
 - `Pull request merged` workflow 已删除，避免合并自动置 Closed；
-- 5 个视图已通过 GraphQL 创建，filter 已设置；groupBy/sortBy 不在公开 API 里，需在 UI 设置。
+- 5 个视图已通过 GraphQL 创建，filter 已设置；groupBy/sortBy 不在公开 API 里，需在 UI 设置；
+- 6 个不在 manifest 的默认标签已删除，线上标签与 `labels.json` 一致；
+- `Waiting on` / `Scope` 多选字段已在 Project 上，选项与文档一致
+  （`gh project field-list` 不显示 multi-select 字段，查字段要用 GraphQL）。
 
 ## 7. 已知边界
 
