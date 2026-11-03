@@ -1,8 +1,8 @@
 {
-  "title": "Issue Ops — 状态看板",
+  "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-02 07:58 UTC",
+  "dataAsOf": "2026-11-03 08:06 UTC",
   "issues": [
     {
       "number": 4,
@@ -20,12 +20,12 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "FCN",
         "status/verifying",
-        "owner/tester",
         "priority/P2",
-        "scope/user-ui"
+        "owner/tester",
+        "scope/user-ui",
+        "frontend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -37,12 +37,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 5,
+      "updatedAt": "2026-11-03T08:06:07Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 7,
-      "search": "4 [fcn][路由] ?tab=holdings 深链接未选中持仓页 bug frontend fcn status/verifying owner/tester priority/p2 scope/user-ui tester user ui"
+      "search": "4 [fcn][路由] ?tab=holdings 深链接未选中持仓页 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
     },
     {
       "number": 3,
@@ -60,12 +60,12 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "FCN",
         "status/verifying",
-        "owner/tester",
         "priority/P2",
-        "scope/user-ui"
+        "owner/tester",
+        "scope/user-ui",
+        "frontend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -77,52 +77,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-10-14T07:58:34.368Z",
-      "updatedDate": "2026-10-14",
-      "ageDays": 45,
-      "stale": true,
-      "staleDays": 7,
-      "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug frontend fcn status/verifying owner/tester priority/p2 scope/user-ui tester user ui"
-    },
-    {
-      "number": 5,
-      "title": "[FCN][管理后台] 划转入口与 FCN 拨款不一致",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/5",
-      "state": "open",
-      "stateReason": null,
-      "status": "Blocked",
-      "priority": "P1",
-      "owners": [
-        "Product"
-      ],
-      "scopes": [
-        "Admin API"
-      ],
-      "labels": [
-        "admin",
-        "backend",
-        "FCN",
-        "status/blocked",
-        "owner/product",
-        "priority/P1",
-        "scope/admin-api"
-      ],
-      "displayLabels": [
-        "admin",
-        "backend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": false,
-      "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 6,
+      "updatedAt": "2026-11-03T08:05:59Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
-      "staleDays": 14,
-      "search": "5 [fcn][管理后台] 划转入口与 fcn 拨款不一致 admin backend fcn status/blocked owner/product priority/p1 scope/admin-api product admin api"
+      "staleDays": 7,
+      "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
     },
     {
       "number": 9,
@@ -139,17 +99,17 @@
         "Admin API"
       ],
       "labels": [
-        "admin",
-        "backend",
-        "FCN",
         "status/blocked",
-        "owner/backend",
         "priority/P1",
-        "scope/admin-api"
+        "owner/backend",
+        "scope/admin-api",
+        "backend",
+        "admin",
+        "FCN"
       ],
       "displayLabels": [
-        "admin",
         "backend",
+        "admin",
         "FCN"
       ],
       "assignees": [],
@@ -157,12 +117,52 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 10,
+      "updatedAt": "2026-11-03T08:05:52Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 14,
-      "search": "9 [fcn][对账] 兑付完成后无 reconcile run 记录 admin backend fcn status/blocked owner/backend priority/p1 scope/admin-api backend admin api"
+      "search": "9 [fcn][对账] 兑付完成后无 reconcile run 记录 status/blocked priority/p1 owner/backend scope/admin-api backend admin fcn backend admin api"
+    },
+    {
+      "number": 5,
+      "title": "[FCN][管理后台] 划转入口与 FCN 拨款不一致",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/5",
+      "state": "open",
+      "stateReason": null,
+      "status": "Blocked",
+      "priority": "P1",
+      "owners": [
+        "Product"
+      ],
+      "scopes": [
+        "Admin API"
+      ],
+      "labels": [
+        "status/blocked",
+        "priority/P1",
+        "owner/product",
+        "scope/admin-api",
+        "backend",
+        "admin",
+        "FCN"
+      ],
+      "displayLabels": [
+        "backend",
+        "admin",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": false,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:05:45Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 14,
+      "search": "5 [fcn][管理后台] 划转入口与 fcn 拨款不一致 status/blocked priority/p1 owner/product scope/admin-api backend admin fcn product admin api"
     },
     {
       "number": 1,
@@ -181,14 +181,14 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "backend",
-        "FCN",
         "status/partial",
+        "priority/P1",
         "owner/frontend",
         "owner/product",
-        "priority/P1",
-        "scope/user-ui"
+        "scope/user-ui",
+        "frontend",
+        "backend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -201,12 +201,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 2,
+      "updatedAt": "2026-11-03T08:05:41Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 14,
-      "search": "1 [fcn][资产组合] total earnings 未包含 fcn 收益 bug frontend backend fcn status/partial owner/frontend owner/product priority/p1 scope/user-ui frontend product user ui"
+      "search": "1 [fcn][资产组合] total earnings 未包含 fcn 收益 bug status/partial priority/p1 owner/frontend owner/product scope/user-ui frontend backend fcn frontend product user ui"
     },
     {
       "number": 2,
@@ -225,14 +225,14 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "backend",
-        "FCN",
         "status/partial",
+        "priority/P2",
         "owner/frontend",
         "owner/backend",
-        "priority/P2",
-        "scope/user-ui"
+        "scope/user-ui",
+        "frontend",
+        "backend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -245,12 +245,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 3,
+      "updatedAt": "2026-11-03T08:05:42Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 14,
-      "search": "2 [fcn][资金流水] 部分历史 fcn 记录的变动后余额为空 bug frontend backend fcn status/partial owner/frontend owner/backend priority/p2 scope/user-ui backend frontend user ui"
+      "search": "2 [fcn][资金流水] 部分历史 fcn 记录的变动后余额为空 bug status/partial priority/p2 owner/frontend owner/backend scope/user-ui frontend backend fcn backend frontend user ui"
     },
     {
       "number": 8,
@@ -266,10 +266,10 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "FCN",
         "priority/P3",
-        "scope/user-ui"
+        "scope/user-ui",
+        "frontend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -281,12 +281,12 @@
       "closedWithoutVerification": false,
       "unowned": true,
       "conflict": false,
-      "updatedAt": "2026-10-14T07:58:34.368Z",
-      "updatedDate": "2026-10-14",
-      "ageDays": 45,
+      "updatedAt": "2026-11-03T08:05:50Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "8 [fcn][钱包] 申购中钱包余额与分币种余额口径 bug frontend fcn priority/p3 scope/user-ui  user ui"
+      "search": "8 [fcn][钱包] 申购中钱包余额与分币种余额口径 bug priority/p3 scope/user-ui frontend fcn  user ui"
     },
     {
       "number": 10,
@@ -302,12 +302,12 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "FCN",
         "status/partial",
         "status/verifying",
         "priority/P3",
-        "scope/user-ui"
+        "scope/user-ui",
+        "frontend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -319,12 +319,12 @@
       "closedWithoutVerification": false,
       "unowned": true,
       "conflict": true,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 11,
+      "updatedAt": "2026-11-03T08:05:52Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 14,
-      "search": "10 [lab] 状态冲突样例 bug frontend fcn status/partial status/verifying priority/p3 scope/user-ui  user ui"
+      "search": "10 [lab] 状态冲突样例 bug status/partial status/verifying priority/p3 scope/user-ui frontend fcn  user ui"
     },
     {
       "number": 6,
@@ -340,12 +340,12 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "backend",
-        "FCN",
         "verified",
         "priority/P1",
-        "scope/user-ui"
+        "scope/user-ui",
+        "frontend",
+        "backend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -358,12 +358,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 6,
+      "updatedAt": "2026-11-03T08:05:47Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "6 [fcn][资产组合] 30 天资产走势未计入 btc 与 fcn bug frontend backend fcn verified priority/p1 scope/user-ui  user ui"
+      "search": "6 [fcn][资产组合] 30 天资产走势未计入 btc 与 fcn bug verified priority/p1 scope/user-ui frontend backend fcn  user ui"
     },
     {
       "number": 7,
@@ -379,10 +379,10 @@
       ],
       "labels": [
         "bug",
-        "frontend",
-        "FCN",
         "priority/P3",
-        "scope/user-ui"
+        "scope/user-ui",
+        "frontend",
+        "FCN"
       ],
       "displayLabels": [
         "bug",
@@ -394,12 +394,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-02T07:58:34.368Z",
-      "updatedDate": "2026-11-02",
-      "ageDays": 7,
+      "updatedAt": "2026-11-03T08:05:48Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "7 [fcn][报价] 报价有效期口径冲突 bug frontend fcn priority/p3 scope/user-ui  user ui"
+      "search": "7 [fcn][报价] 报价有效期口径冲突 bug priority/p3 scope/user-ui frontend fcn  user ui"
     }
   ],
   "statusMeta": {
