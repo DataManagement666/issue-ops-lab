@@ -36,10 +36,12 @@ Project：https://github.com/users/DataManagement666/projects/1
 
 Project → 右上角 `...` → **Workflows**：
 
-- **Auto-add to project**：`repo:DataManagement666/issue-ops-lab is:issue`
-- **Item closed**：把 Status 设为 Closed（确认启用）
-- **Item reopened**：如果可用，把 Status 设为 Open；不可用就手动
-- **Pull request merged**：**不要启用**——合并不等于验收通过
+- **Auto-add to project**：`repo:DataManagement666/issue-ops-lab is:issue`；
+  当前已启用列表里没有这一项，需要在 UI 里添加并配置
+- **Item closed**：已启用；测试通过（#11 关闭后 Status 自动变 Closed）
+- **Item reopened**：没有这个内置 workflow；重新打开时手动改回 Open / Partial / Verifying
+- **Pull request merged**：已通过 GraphQL 删除——合并不等于验收通过
+- **Auto-add sub-issues** / **Auto-close issue** / **Item added to project** / **Pull request linked to issue**：保留默认
 - **Auto-archive**：按需
 
 自定义 Action 需要 PAT / GitHub App；`GITHUB_TOKEN` 不能访问 Projects v2。
@@ -70,7 +72,14 @@ Open ──▶ Partial ──▶ Verifying ──▶ Closed
 7. 如果目标仓库仍保留 `status/*` 等标签，先删标签、把值写进 Project 字段；
    本 lab 的标签迁移脚本已跑完，不需要再保留状态标签。
 
-## 6. 已知边界
+## 6. 已验证
+
+- 2026-11-03：关闭 #11 → Project Status 自动从 Open 变 Closed（Item closed workflow）；
+- 重新打开 #11 → Status 保持 Closed，手动改回 Open（没有 Item reopened workflow）；
+- `Pull request merged` workflow 已删除，避免合并自动置 Closed；
+- 5 个视图已通过 GraphQL 创建，filter 已设置；groupBy/sortBy 不在公开 API 里，需在 UI 设置。
+
+## 7. 已知边界
 
 - **Project 是个人所有**：当前 public，团队可以直接看；org 级看板需要 org 权限。lab 里全是合成数据。
 - **内置 workflow 是 UI 配置**：不在 git 里，迁移时按第 3 节重配。

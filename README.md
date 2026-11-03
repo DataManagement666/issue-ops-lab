@@ -42,8 +42,8 @@
 3. 验收通过：测试/验收方把 Status 改为 **Closed**，再关闭 issue；
 4. 验收不通过：Status 改回 **Partial** 或 **Verifying**，在 issue 评论写清缺口；
 5. 产品裁定不修复 / 重复 / 无效：Status 改为 **Not planned**，再关闭 issue；
-6. issue 关闭后，Project 内置 workflow 可以把 Status 设为 Closed；
-   issue 重新打开时，手动把 Status 改回 Open / Partial / Verifying。
+6. issue 关闭后，Project 的 **Item closed** workflow 会把 Status 设为 Closed；
+   issue 重新打开时，**没有 Item reopened workflow**，手动把 Status 改回 Open / Partial / Verifying。
 
 ## 视图
 
@@ -60,10 +60,19 @@
 ## 自动化
 
 - **Auto-add to project**：仓库 `DataManagement666/issue-ops-lab` + `is:issue`；
-- **Item closed → Status Closed**：在 Project → Workflows 里确认启用；
-- 不要启用 **Pull request merged → Done**：合并 ≠ 验收通过；
+  当前已启用的内置列表里没有这一项，需要在 Project → Workflows 里添加并配置；
+- **Item closed → Status Closed**：已启用，2026-11-03 用 #11 测试通过；
+- **Item reopened**：没有这个内置 workflow；重新打开时手动改回 Open / Partial / Verifying；
+- **Pull request merged**：已删除，避免合并自动把 Status 置为 Closed（合并 ≠ 验收通过）；
 - 自定义 Action 需要 PAT / GitHub App：`GITHUB_TOKEN` 不能读写 Projects v2。
   当前只用 Projects 内置 workflow，不引入 PAT。
+
+## 已验证（2026-11-03）
+
+- 关闭 #11 → Project Status 自动从 Open 变 Closed；
+- 重新打开 #11 → Status 保持 Closed，手动改回 Open（没有 Item reopened）；
+- `Pull request merged` workflow 已删除；
+- 5 个视图已通过 GraphQL 创建，筛选已设置；分组/排序需在 UI 里设置一次。
 
 ## 本地
 
