@@ -4,6 +4,13 @@
   "private": true,
   "type": "module",
   "description": "Issue status lab using a native GitHub Projects board",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataManagement666/issue-ops-lab.git"
+  },
   "scripts": {
     "labels": "node scripts/sync-labels.mjs"
   }

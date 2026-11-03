@@ -11,6 +11,16 @@ requireEnv();
 
 const manifestPath = path.resolve(".github/labels.json");
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+
+// 提前校验：manifest 里重名会在同步中途 422，先失败并指出名字。
+const names = new Set();
+for (const label of manifest) {
+  if (names.has(label.name)) {
+    throw new Error(`labels.json 里有重复标签名: ${label.name}`);
+  }
+  names.add(label.name);
+}
+
 const existing = await paginate(`/repos/${repo}/labels`);
 const byName = new Map(existing.map((label) => [label.name, label]));
 
