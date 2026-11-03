@@ -38,6 +38,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_SERVER_URL: ${{ github.server_url }}
           DASHBOARD_TITLE: "Issue Ops Lab — 状态看板"
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
       - name: Commit generated dashboard
         run: |
           git config user.name "github-actions[bot]"

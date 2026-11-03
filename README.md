@@ -4,6 +4,8 @@
 把「Open / Partial / Blocked / Verifying / Closed」这套状态真正落到 GitHub 上。
 
 > 这里是合成数据的实验场，不包含真实账号、订单号或接口响应。
+> 仓库已转为 **public**，所有 issue / 评论都是合成数据。
+> 在线看板：**https://datamanagement666.github.io/issue-ops-lab/**
 > 在真实仓库验证通过后，按 [docs/MIGRATION.md](docs/MIGRATION.md) 迁移。
 
 ## 它解决什么问题
@@ -60,17 +62,19 @@
   Issue Ops 用 `GITHUB_TOKEN` 改标签不会触发 `issues` 事件，靠 `workflow_run` 补刷新；
 - 生成 `dashboard/index.html`、`dashboard/status.json`、`dashboard/STATUS.md`；
 - 内容没变不 commit；
-- 设置仓库变量 `ENABLE_PAGES=true` 后自动部署 GitHub Pages。
-  ⚠️ 当前账号的**私有仓库**不支持 Pages（实测 422：`Your current plan does not support GitHub Pages for this repository`）；
-  要在线看 HTML 看板，需要把仓库改成 public，或保留 `dashboard/STATUS.md` / 本地打开 `dashboard/index.html`。
+- 上传 `issue-dashboard` artifact；
+- 仓库变量 `ENABLE_PAGES=true` 已设置，GitHub Pages 已启用：
+  **https://datamanagement666.github.io/issue-ops-lab/**
+  （lab 已转为 public；私有仓库的 Pages 取决于账号套餐。）
 
 ## 看板
 
 - **Markdown 版**：[dashboard/STATUS.md](dashboard/STATUS.md)（GitHub 直接渲染）
 - **HTML 版**：`dashboard/index.html`（自包含，可直接用浏览器打开）；
   每次 `Issue Dashboard` run 也会上传 `issue-dashboard` artifact，可直接下载
-- **GitHub Pages**：仓库 Settings → Pages → Source 选 GitHub Actions，
-  再设置变量 `ENABLE_PAGES=true`；之后每次看板更新会自动部署。
+- **GitHub Pages（已启用）**：**https://datamanagement666.github.io/issue-ops-lab/**
+  （仓库 Settings → Pages → Source 选 GitHub Actions，并设置变量 `ENABLE_PAGES=true`；
+  之后每次看板更新会自动部署。）
 
 看板包含：Open 数、Partial/Blocked/Verifying 分桶、需要关注（无人负责 / 超期 / 状态冲突 /
 关闭缺 `verified`）、状态分布条、可筛选可排序的 issue 表。
@@ -132,7 +136,8 @@ docs/
 - #11 加 `verified` 再用 `completed` 关闭 → 保持 closed；
 - #11 reopen → 自动移除 `verified` 并评论；
 - Issue Ops 结束后 `workflow_run` 触发看板刷新，状态从 Conflict 变为 Verifying；
-- 看板在 1280px 和 390px 宽度下渲染通过；筛选、搜索、排序、主题切换无 console error。
+- 看板在 1280px 和 390px 宽度下渲染通过；筛选、搜索、排序、主题切换无 console error；
+- GitHub Pages 已部署并通过 HTTP 200 验证：https://datamanagement666.github.io/issue-ops-lab/
 
 ## 为什么不用 Projects
 
