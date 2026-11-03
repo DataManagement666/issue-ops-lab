@@ -2,7 +2,7 @@
   "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-03 08:06 UTC",
+  "dataAsOf": "2026-11-03 08:07 UTC",
   "issues": [
     {
       "number": 4,
@@ -83,6 +83,43 @@
       "stale": false,
       "staleDays": 7,
       "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
+    },
+    {
+      "number": 10,
+      "title": "[Lab] 状态冲突样例",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/10",
+      "state": "open",
+      "stateReason": null,
+      "status": "Verifying",
+      "priority": "P3",
+      "owners": [],
+      "scopes": [
+        "User UI"
+      ],
+      "labels": [
+        "bug",
+        "status/verifying",
+        "priority/P3",
+        "scope/user-ui",
+        "frontend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:06:46Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 7,
+      "search": "10 [lab] 状态冲突样例 bug status/verifying priority/p3 scope/user-ui frontend fcn  user ui"
     },
     {
       "number": 9,
@@ -289,44 +326,6 @@
       "search": "8 [fcn][钱包] 申购中钱包余额与分币种余额口径 bug priority/p3 scope/user-ui frontend fcn  user ui"
     },
     {
-      "number": 10,
-      "title": "[Lab] 状态冲突样例",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/10",
-      "state": "open",
-      "stateReason": null,
-      "status": "Conflict",
-      "priority": "P3",
-      "owners": [],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/partial",
-        "status/verifying",
-        "priority/P3",
-        "scope/user-ui",
-        "frontend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": true,
-      "conflict": true,
-      "updatedAt": "2026-11-03T08:05:52Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 14,
-      "search": "10 [lab] 状态冲突样例 bug status/partial status/verifying priority/p3 scope/user-ui frontend fcn  user ui"
-    },
-    {
       "number": 6,
       "title": "[FCN][资产组合] 30 天资产走势未计入 BTC 与 FCN",
       "url": "https://github.com/DataManagement666/issue-ops-lab/issues/6",
@@ -364,6 +363,35 @@
       "stale": false,
       "staleDays": 30,
       "search": "6 [fcn][资产组合] 30 天资产走势未计入 btc 与 fcn bug verified priority/p1 scope/user-ui frontend backend fcn  user ui"
+    },
+    {
+      "number": 11,
+      "title": "[Lab] 关闭 gate 测试",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/11",
+      "state": "closed",
+      "stateReason": "completed",
+      "status": "Closed",
+      "priority": "P3",
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "priority/P3"
+      ],
+      "displayLabels": [
+        "bug"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": true,
+      "unowned": false,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:07:41Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "11 [lab] 关闭 gate 测试 bug priority/p3  "
     },
     {
       "number": 7,
