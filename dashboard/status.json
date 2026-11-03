@@ -2,7 +2,7 @@
   "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-03 08:09 UTC",
+  "dataAsOf": "2026-11-03 08:10 UTC",
   "issues": [
     {
       "number": 4,
@@ -376,22 +376,23 @@
       "scopes": [],
       "labels": [
         "bug",
+        "verified",
         "priority/P3"
       ],
       "displayLabels": [
         "bug"
       ],
       "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": true,
+      "verified": true,
+      "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-03T08:09:21Z",
+      "updatedAt": "2026-11-03T08:10:05Z",
       "updatedDate": "2026-11-03",
       "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "11 [lab] 关闭 gate 测试 bug priority/p3  "
+      "search": "11 [lab] 关闭 gate 测试 bug verified priority/p3  "
     },
     {
       "number": 7,
