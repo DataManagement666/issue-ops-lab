@@ -2,7 +2,7 @@
   "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-03 08:14 UTC",
+  "dataAsOf": "2026-11-03 08:35 UTC",
   "issues": [
     {
       "number": 4,
@@ -239,94 +239,6 @@
       "search": "5 [fcn][管理后台] 划转入口与 fcn 拨款不一致 status/blocked priority/p1 owner/product scope/admin-api backend admin fcn product admin api"
     },
     {
-      "number": 1,
-      "title": "[FCN][资产组合] Total Earnings 未包含 FCN 收益",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/1",
-      "state": "open",
-      "stateReason": null,
-      "status": "Partial",
-      "priority": "P1",
-      "owners": [
-        "Frontend",
-        "Product"
-      ],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/partial",
-        "priority/P1",
-        "owner/frontend",
-        "owner/product",
-        "scope/user-ui",
-        "frontend",
-        "backend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "backend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": false,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:05:41Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 14,
-      "search": "1 [fcn][资产组合] total earnings 未包含 fcn 收益 bug status/partial priority/p1 owner/frontend owner/product scope/user-ui frontend backend fcn frontend product user ui"
-    },
-    {
-      "number": 2,
-      "title": "[FCN][资金流水] 部分历史 FCN 记录的变动后余额为空",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/2",
-      "state": "open",
-      "stateReason": null,
-      "status": "Partial",
-      "priority": "P2",
-      "owners": [
-        "Backend",
-        "Frontend"
-      ],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/partial",
-        "priority/P2",
-        "owner/frontend",
-        "owner/backend",
-        "scope/user-ui",
-        "frontend",
-        "backend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "backend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": false,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:05:42Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 14,
-      "search": "2 [fcn][资金流水] 部分历史 fcn 记录的变动后余额为空 bug status/partial priority/p2 owner/frontend owner/backend scope/user-ui frontend backend fcn backend frontend user ui"
-    },
-    {
       "number": 11,
       "title": "[Lab] 关闭 gate 测试",
       "url": "https://github.com/DataManagement666/issue-ops-lab/issues/11",
@@ -354,6 +266,74 @@
       "stale": false,
       "staleDays": 30,
       "search": "11 [lab] 关闭 gate 测试 bug priority/p3  "
+    },
+    {
+      "number": 2,
+      "title": "[FCN][资金流水] 部分历史 FCN 记录的变动后余额为空",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/2",
+      "state": "open",
+      "stateReason": null,
+      "status": "Open",
+      "priority": null,
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "frontend",
+        "backend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "backend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:35:49Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "2 [fcn][资金流水] 部分历史 fcn 记录的变动后余额为空 bug frontend backend fcn  "
+    },
+    {
+      "number": 1,
+      "title": "[FCN][资产组合] Total Earnings 未包含 FCN 收益",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/1",
+      "state": "open",
+      "stateReason": null,
+      "status": "Open",
+      "priority": null,
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "frontend",
+        "backend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "backend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:35:39Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "1 [fcn][资产组合] total earnings 未包含 fcn 收益 bug frontend backend fcn  "
     },
     {
       "number": 6,
