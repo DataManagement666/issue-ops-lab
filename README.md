@@ -134,6 +134,19 @@ docs/
 - Issue Ops 结束后 `workflow_run` 触发看板刷新，状态从 Conflict 变为 Verifying；
 - 看板在 1280px 和 390px 宽度下渲染通过；筛选、搜索、排序、主题切换无 console error。
 
+## 为什么不用 Projects
+
+本仓库选择「标签 + Actions + 生成式看板」这条路线，**不需要 GitHub Projects**。
+之前讨论的「Projects 原生看板」是另一条独立路线：它需要 Project 的所有权（个人 / 组织）
+和 `project` scope，才能读写自定义字段。两条路线不是依赖关系：
+
+- 本仓库：标签是唯一真值，看板是生成的静态页面；
+- Projects 路线：Project 字段是视图，标签可以继续做自动化门禁；
+- 如果以后想要交互式 board，可以把同一批 issue 加进 Project，标签仍然是真值。
+
+当前 `gh` token 只有 `repo` / `workflow`，lab 的 workflow 没有用到 `project` scope。
+这不是「Projects 不可用」，而是「这条路线不需要它」。
+
 ## 设计边界
 
 - **不改业务仓库**：这个仓库只读写自己的 issue；迁移时才复制 `.github/` 与 `scripts/`。
