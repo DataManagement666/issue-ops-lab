@@ -2,7 +2,7 @@
   "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-03 08:12 UTC",
+  "dataAsOf": "2026-11-03 08:13 UTC",
   "issues": [
     {
       "number": 4,
@@ -114,7 +114,7 @@
       "closedWithoutVerification": false,
       "unowned": true,
       "conflict": false,
-      "updatedAt": "2026-11-03T08:12:24Z",
+      "updatedAt": "2026-11-03T08:12:56Z",
       "updatedDate": "2026-11-03",
       "ageDays": 0,
       "stale": false,
@@ -332,12 +332,13 @@
       "url": "https://github.com/DataManagement666/issue-ops-lab/issues/11",
       "state": "open",
       "stateReason": "reopened",
-      "status": "Open",
+      "status": "Partial",
       "priority": "P3",
       "owners": [],
       "scopes": [],
       "labels": [
         "bug",
+        "status/partial",
         "priority/P3"
       ],
       "displayLabels": [
@@ -348,12 +349,12 @@
       "closedWithoutVerification": false,
       "unowned": true,
       "conflict": false,
-      "updatedAt": "2026-11-03T08:10:57Z",
+      "updatedAt": "2026-11-03T08:13:28Z",
       "updatedDate": "2026-11-03",
       "ageDays": 0,
       "stale": false,
-      "staleDays": 30,
-      "search": "11 [lab] 关闭 gate 测试 bug priority/p3  "
+      "staleDays": 14,
+      "search": "11 [lab] 关闭 gate 测试 bug status/partial priority/p3  "
     },
     {
       "number": 6,
