@@ -78,7 +78,14 @@ GitHub Issues ──REST──▶ build-dashboard.mjs
                          ├─▶ dashboard/status.json   机器可读
                          ├─▶ dashboard/STATUS.md     GitHub 渲染
                          └─▶ dashboard/index.html    自包含静态看板
+
+Issue Ops 完成 ──workflow_run──▶ 再跑一次 build-dashboard.mjs
 ```
+
+为什么需要 `workflow_run`：Issue Ops 用 `GITHUB_TOKEN` 改标签，GitHub 不会为
+`GITHUB_TOKEN` 产生的事件再触发 `issues` 工作流；如果只监听 `issues`，看板会停在
+归一化前的旧状态。`workflow_run` 在 Issue Ops 结束后补一次刷新，且不会形成循环
+（看板 workflow 不触发 Issue Ops）。
 
 派生字段：
 

@@ -81,7 +81,8 @@ gh variable set ENABLE_PAGES --body true --repo owner/target-repo
 
 下次 dashboard workflow 会部署 `dashboard/`。
 私有仓库的 Pages 可用性取决于账号/组织套餐；不可用时仍然可以看
-`dashboard/STATUS.md`，或下载 `dashboard/index.html` 本地打开。
+`dashboard/STATUS.md`，或从 `Issue Dashboard` run 的 **Artifacts → issue-dashboard**
+下载 `index.html` 本地打开。
 
 ## 6. 回滚
 

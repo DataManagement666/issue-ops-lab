@@ -56,15 +56,19 @@
 
 `.github/workflows/issue-dashboard.yml`：
 
-- issue 事件 + 每小时定时触发；
+- issue 事件 + **Issue Ops 完成（`workflow_run`）** + 每小时定时触发；
+  Issue Ops 用 `GITHUB_TOKEN` 改标签不会触发 `issues` 事件，靠 `workflow_run` 补刷新；
 - 生成 `dashboard/index.html`、`dashboard/status.json`、`dashboard/STATUS.md`；
 - 内容没变不 commit；
 - 设置仓库变量 `ENABLE_PAGES=true` 后自动部署 GitHub Pages。
+  ⚠️ 当前账号的**私有仓库**不支持 Pages（实测 422：`Your current plan does not support GitHub Pages for this repository`）；
+  要在线看 HTML 看板，需要把仓库改成 public，或保留 `dashboard/STATUS.md` / 本地打开 `dashboard/index.html`。
 
 ## 看板
 
 - **Markdown 版**：[dashboard/STATUS.md](dashboard/STATUS.md)（GitHub 直接渲染）
-- **HTML 版**：`dashboard/index.html`（自包含，可直接用浏览器打开）
+- **HTML 版**：`dashboard/index.html`（自包含，可直接用浏览器打开）；
+  每次 `Issue Dashboard` run 也会上传 `issue-dashboard` artifact，可直接下载
 - **GitHub Pages**：仓库 Settings → Pages → Source 选 GitHub Actions，
   再设置变量 `ENABLE_PAGES=true`；之后每次看板更新会自动部署。
 
@@ -119,6 +123,16 @@ docs/
   ARCHITECTURE.md      状态模型与自动化规则
   MIGRATION.md         迁移到真实仓库
 ```
+
+## 已验证的行为（2026-11-03）
+
+- #10 同时带 `status/partial` + `status/verifying` → 自动保留一个并评论；
+- #3 / #4 加 `status/verifying` → 自动贴验收清单；
+- #11 用 `completed` 关闭但没有 `verified` → 自动 reopen + 评论；
+- #11 加 `verified` 再用 `completed` 关闭 → 保持 closed；
+- #11 reopen → 自动移除 `verified` 并评论；
+- Issue Ops 结束后 `workflow_run` 触发看板刷新，状态从 Conflict 变为 Verifying；
+- 看板在 1280px 和 390px 宽度下渲染通过；筛选、搜索、排序、主题切换无 console error。
 
 ## 设计边界
 

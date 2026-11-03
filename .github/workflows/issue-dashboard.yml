@@ -49,6 +49,12 @@ jobs:
           fi
           git commit -m "chore: update issue dashboard [skip ci]"
           git push
+      - name: Upload dashboard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue-dashboard
+          path: dashboard
+          retention-days: 14
       - name: Configure Pages
         if: vars.ENABLE_PAGES == 'true'
         uses: actions/configure-pages@v5
