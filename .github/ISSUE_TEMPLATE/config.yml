@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 状态模型与标签说明
+    url: https://github.com/DataManagement666/issue-ops-lab/blob/main/docs/ARCHITECTURE.md
+    about: 先看状态定义、标签、自动化规则和关闭 gate
+  - name: 迁移到真实仓库
+    url: https://github.com/DataManagement666/issue-ops-lab/blob/main/docs/MIGRATION.md
+    about: 如何把 .github/ 和 scripts/ 搬到目标仓库

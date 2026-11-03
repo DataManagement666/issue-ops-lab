@@ -1,0 +1,13 @@
+{
+  "name": "issue-ops-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Issue status management lab: labels, automation, and dashboard",
+  "scripts": {
+    "labels": "node scripts/sync-labels.mjs",
+    "seed": "node scripts/seed-issues.mjs",
+    "dashboard": "node scripts/build-dashboard.mjs",
+    "ops": "node scripts/issue-ops.mjs"
+  }
+}

@@ -1,0 +1,89 @@
+name: Bug 报告
+description: 记录可复现的问题、验收标准与证据
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        写清可复核的证据。状态、优先级、owner 由维护者/自动化用标签维护，不要写进标题。
+        状态模型见 [docs/ARCHITECTURE.md](https://github.com/DataManagement666/issue-ops-lab/blob/main/docs/ARCHITECTURE.md)。
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 环境
+      options:
+        - Staging
+        - Production
+        - Local
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 页面路径 / 接口
+      placeholder: "/strategy/fcn/balanced?tab=holdings 或 GET /api/me/portfolio"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果与验收标准
+      description: 写清「怎样算通过」，测试/验收方会按这里复核。
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: 命令、响应、截图、trace 链接。没有证据的条目会被要求补充。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影响范围（建议）
+      multiple: true
+      options:
+        - User API
+        - Admin API
+        - User UI
+        - Admin UI
+        - Docs
+        - Data
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级（建议）
+      options:
+        - P1
+        - P2
+        - P3
+    validations:
+      required: false

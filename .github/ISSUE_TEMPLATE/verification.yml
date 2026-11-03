@@ -1,0 +1,52 @@
+name: 验收记录
+description: 测试/验收方记录可复核的通过或不通过证据
+title: "[Verify] "
+labels: ["verification"]
+body:
+  - type: input
+    id: issue
+    attributes:
+      label: 对应 issue
+      placeholder: "#12"
+    validations:
+      required: true
+
+  - type: input
+    id: image
+    attributes:
+      label: 环境 / 镜像
+      placeholder: "Staging / api-32eeedec"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 验证步骤与结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: 命令、响应、截图、trace 链接。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: conclusion
+    attributes:
+      label: 结论
+      options:
+        - 通过
+        - 不通过
+        - 部分通过
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        「通过」后请由验收方在对应 issue 上添加 `verified` 标签，再关闭；
+        本表单本身不等于关闭依据。开发自测不算关闭。
