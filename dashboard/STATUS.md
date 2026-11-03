@@ -8,13 +8,13 @@
 | 指标 | 数量 |
 | --- | ---: |
 | 全部 | 11 |
-| 未关闭 | 8 |
-| Closed | 3 |
+| 未关闭 | 9 |
+| Closed | 2 |
 | Partial | 2 |
 | Blocked | 2 |
 | Verifying | 3 |
 | Not planned | 1 |
-| 无人负责 | 2 |
+| 无人负责 | 3 |
 | 超期未更新 | 0 |
 | 状态冲突 | 0 |
 | 关闭缺 verified | 0 |
@@ -40,6 +40,7 @@
 | #5 | [[FCN][管理后台] 划转入口与 FCN 拨款不一致](https://github.com/DataManagement666/issue-ops-lab/issues/5) | Blocked | P1 | Product | 2026-11-03 |
 | #1 | [[FCN][资产组合] Total Earnings 未包含 FCN 收益](https://github.com/DataManagement666/issue-ops-lab/issues/1) | Partial | P1 | Frontend, Product | 2026-11-03 |
 | #2 | [[FCN][资金流水] 部分历史 FCN 记录的变动后余额为空](https://github.com/DataManagement666/issue-ops-lab/issues/2) | Partial | P2 | Backend, Frontend | 2026-11-03 |
+| #11 | [[Lab] 关闭 gate 测试](https://github.com/DataManagement666/issue-ops-lab/issues/11) | Open | P3 | 未指定 | 2026-11-03 |
 | #8 | [[FCN][钱包] 申购中钱包余额与分币种余额口径](https://github.com/DataManagement666/issue-ops-lab/issues/8) | Open | P3 | 未指定 | 2026-11-03 |
 
 ## Closed issues
@@ -47,9 +48,8 @@
 | # | 标题 | 状态 | 优先级 | 关闭 |
 | ---: | --- | --- | --- | --- |
 | #6 | [[FCN][资产组合] 30 天资产走势未计入 BTC 与 FCN](https://github.com/DataManagement666/issue-ops-lab/issues/6) | Closed | P1 | 2026-11-03 |
-| #11 | [[Lab] 关闭 gate 测试](https://github.com/DataManagement666/issue-ops-lab/issues/11) | Closed | P3 | 2026-11-03 |
 | #7 | [[FCN][报价] 报价有效期口径冲突](https://github.com/DataManagement666/issue-ops-lab/issues/7) | Not planned | P3 | 2026-11-03 |
 
 ## 需要关注
 
-- **无人负责**：2 个 open issue 没有 owner 标签，也没有 assignee。
+- **无人负责**：3 个 open issue 没有 owner 标签，也没有 assignee。
