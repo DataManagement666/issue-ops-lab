@@ -71,14 +71,38 @@ Open ──▶ Partial ──▶ Verifying ──▶ Closed
 
 ## 5. 迁移到另一个仓库 / org
 
+> GitHub Projects 属于 **user / org**，不属于仓库；不能把 Project「放进」另一个仓库。
+> 能迁移的是字段/视图/配置，以及把目标仓库的 issue 加进来。
+> 目标 owner 是 org 时，需要 org 的 Project 权限；个人 Project 可以引用 org 仓库的 issue，
+> 但团队可见性和交接不如 org Project。
+
+### 仓库文件
+
+复制：
+
+```
+.github/ISSUE_TEMPLATE/
+.github/labels.json
+.github/workflows/sync-labels.yml
+scripts/sync-labels.mjs
+scripts/lib/github.mjs
+docs/PROJECT.md
+```
+
+不要在目标仓库恢复 `status/*`、`priority/*`、`owner/*`、`scope/*`、`verified` 标签；
+状态/优先级/owner/scope 只放在 Project 字段里。
+
+### Project
+
 1. 在目标 owner（个人或 org）下新建 Project；
 2. 链接目标仓库（Project → Settings → Linked repositories）；
 3. 按第 1 节建字段；
 4. 把目标仓库的 issue 加进 Project（Add items → 按仓库搜索，或 `gh project item-add`）；
 5. 开启第 3 节的 workflow；
 6. 按第 2 节建视图，设置分组/排序；
-7. 如果目标仓库仍保留 `status/*` 等标签，先删标签、把值写进 Project 字段；
-   本 lab 的标签迁移脚本已跑完，不需要再保留状态标签。
+7. 如果目标仓库仍保留 `status/*` 等标签，先把值写进 Project 字段，再删标签；
+8. 如果 GitHub 支持 transfer 且你有权限，也可以尝试转移现有 Project 再 link 目标仓库；
+   否则按上面的步骤重建（字段/视图配置是显式的，重建成本不高）。
 
 ## 6. 已验证
 
