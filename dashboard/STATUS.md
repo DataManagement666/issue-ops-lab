@@ -10,13 +10,13 @@
 | 全部 | 11 |
 | 未关闭 | 9 |
 | 已关闭 | 2 |
-| Open（无状态） | 6 |
+| Open（无状态） | 8 |
 | Partial | 0 |
-| Blocked | 1 |
-| Verifying | 2 |
+| Blocked | 0 |
+| Verifying | 1 |
 | Closed | 1 |
 | Not planned | 1 |
-| 无人负责 | 8 |
+| 无人负责 | 9 |
 | 超期未更新 | 0 |
 | 状态冲突 | 0 |
 | 关闭缺 verified | 1 |
@@ -35,10 +35,10 @@
 
 | # | 标题 | 状态 | 优先级 | Owner | 更新 |
 | ---: | --- | --- | --- | --- | --- |
-| #8 | [[FCN][钱包] 申购中钱包余额与分币种余额口径](https://github.com/DataManagement666/issue-ops-lab/issues/8) | Verifying | P3 | 未指定 | 2026-11-03 |
 | #10 | [[Lab] 状态冲突样例](https://github.com/DataManagement666/issue-ops-lab/issues/10) | Verifying | P3 | 未指定 | 2026-11-03 |
-| #9 | [[FCN][对账] 兑付完成后无 reconcile run 记录](https://github.com/DataManagement666/issue-ops-lab/issues/9) | Blocked | P1 | Backend | 2026-11-03 |
 | #11 | [[Lab] 关闭 gate 测试](https://github.com/DataManagement666/issue-ops-lab/issues/11) | Open | P3 | 未指定 | 2026-11-03 |
+| #9 | [[FCN][对账] 兑付完成后无 reconcile run 记录](https://github.com/DataManagement666/issue-ops-lab/issues/9) | Open | — | 未指定 | 2026-11-03 |
+| #8 | [[FCN][钱包] 申购中钱包余额与分币种余额口径](https://github.com/DataManagement666/issue-ops-lab/issues/8) | Open | — | 未指定 | 2026-11-03 |
 | #5 | [[FCN][管理后台] 划转入口与 FCN 拨款不一致](https://github.com/DataManagement666/issue-ops-lab/issues/5) | Open | — | 未指定 | 2026-11-03 |
 | #4 | [[FCN][路由] ?tab=holdings 深链接未选中持仓页](https://github.com/DataManagement666/issue-ops-lab/issues/4) | Open | — | 未指定 | 2026-11-03 |
 | #3 | [[FCN][持仓] 已到期待兑付订单显示负数剩余天数](https://github.com/DataManagement666/issue-ops-lab/issues/3) | Open | — | 未指定 | 2026-11-03 |
@@ -54,5 +54,5 @@
 
 ## 需要关注
 
-- **无人负责**：8 个 open issue 没有 owner 标签，也没有 assignee。
+- **无人负责**：9 个 open issue 没有 owner 标签，也没有 assignee。
 - **关闭缺验收**：1 个 issue 以 completed 关闭但没有 `verified`。
