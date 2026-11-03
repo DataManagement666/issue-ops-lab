@@ -85,6 +85,36 @@
       "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
     },
     {
+      "number": 11,
+      "title": "[Lab] 关闭 gate 测试",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/11",
+      "state": "open",
+      "stateReason": "reopened",
+      "status": "Verifying",
+      "priority": "P3",
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "status/verifying",
+        "priority/P3"
+      ],
+      "displayLabels": [
+        "bug"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:13:45Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 7,
+      "search": "11 [lab] 关闭 gate 测试 bug status/verifying priority/p3  "
+    },
+    {
       "number": 8,
       "title": "[FCN][钱包] 申购中钱包余额与分币种余额口径",
       "url": "https://github.com/DataManagement666/issue-ops-lab/issues/8",
@@ -325,36 +355,6 @@
       "stale": false,
       "staleDays": 14,
       "search": "2 [fcn][资金流水] 部分历史 fcn 记录的变动后余额为空 bug status/partial priority/p2 owner/frontend owner/backend scope/user-ui frontend backend fcn backend frontend user ui"
-    },
-    {
-      "number": 11,
-      "title": "[Lab] 关闭 gate 测试",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/11",
-      "state": "open",
-      "stateReason": "reopened",
-      "status": "Partial",
-      "priority": "P3",
-      "owners": [],
-      "scopes": [],
-      "labels": [
-        "bug",
-        "status/partial",
-        "priority/P3"
-      ],
-      "displayLabels": [
-        "bug"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": true,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:13:28Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 14,
-      "search": "11 [lab] 关闭 gate 测试 bug status/partial priority/p3  "
     },
     {
       "number": 6,
