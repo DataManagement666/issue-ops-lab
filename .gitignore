@@ -4,3 +4,6 @@ node_modules/
 !.env.example
 *.log
 .DS_Store
+
+# 本地截图，不提交
+Snipaste_*.png
