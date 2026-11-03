@@ -1,6 +1,11 @@
 name: Issue Dashboard
 
 on:
+  # Issue Ops 用 GITHUB_TOKEN 改标签时不会触发 issues 事件；
+  # 用 workflow_run 在它结束后补一次刷新，避免看板停留在旧状态。
+  workflow_run:
+    workflows: ["Issue Ops"]
+    types: [completed]
   issues:
     types: [opened, edited, labeled, unlabeled, closed, reopened, assigned, unassigned]
   schedule:

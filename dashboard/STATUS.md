@@ -9,10 +9,12 @@
 | --- | ---: |
 | 全部 | 11 |
 | 未关闭 | 9 |
-| Closed | 2 |
+| 已关闭 | 2 |
+| Open（无状态） | 2 |
 | Partial | 2 |
 | Blocked | 2 |
 | Verifying | 3 |
+| Closed | 1 |
 | Not planned | 1 |
 | 无人负责 | 3 |
 | 超期未更新 | 0 |
