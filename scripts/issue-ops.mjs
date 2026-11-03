@@ -117,7 +117,8 @@ async function normalizeStatus(number, issueLabels, preferred) {
   ];
   await setLabels(number, nextLabels);
 
-  const marker = "<!-- status-normalized -->";
+  // 标记里带上保留的状态：连续两次归一化到不同状态时都能留下准确记录。
+  const marker = `<!-- status-normalized:${keep} -->`;
   if (!(await hasCommentMarker(number, marker))) {
     await addComment(
       number,
