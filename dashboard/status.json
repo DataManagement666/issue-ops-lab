@@ -2,45 +2,8 @@
   "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-03 08:36 UTC",
+  "dataAsOf": "2026-11-03 08:37 UTC",
   "issues": [
-    {
-      "number": 10,
-      "title": "[Lab] 状态冲突样例",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/10",
-      "state": "open",
-      "stateReason": null,
-      "status": "Verifying",
-      "priority": "P3",
-      "owners": [],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/verifying",
-        "priority/P3",
-        "scope/user-ui",
-        "frontend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": true,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:06:46Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 7,
-      "search": "10 [lab] 状态冲突样例 bug status/verifying priority/p3 scope/user-ui frontend fcn  user ui"
-    },
     {
       "number": 11,
       "title": "[Lab] 关闭 gate 测试",
@@ -48,12 +11,11 @@
       "state": "open",
       "stateReason": "reopened",
       "status": "Open",
-      "priority": "P3",
+      "priority": null,
       "owners": [],
       "scopes": [],
       "labels": [
-        "bug",
-        "priority/P3"
+        "bug"
       ],
       "displayLabels": [
         "bug"
@@ -63,12 +25,44 @@
       "closedWithoutVerification": false,
       "unowned": true,
       "conflict": false,
-      "updatedAt": "2026-11-03T08:14:11Z",
+      "updatedAt": "2026-11-03T08:37:01Z",
       "updatedDate": "2026-11-03",
       "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "11 [lab] 关闭 gate 测试 bug priority/p3  "
+      "search": "11 [lab] 关闭 gate 测试 bug  "
+    },
+    {
+      "number": 10,
+      "title": "[Lab] 状态冲突样例",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/10",
+      "state": "open",
+      "stateReason": null,
+      "status": "Open",
+      "priority": null,
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:36:53Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "10 [lab] 状态冲突样例 bug frontend fcn  "
     },
     {
       "number": 9,
