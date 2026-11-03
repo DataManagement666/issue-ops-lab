@@ -26,17 +26,15 @@ Project：https://github.com/users/DataManagement666/projects/1
 | 当前状态 | Table | 无 | 按 Status 分组；Priority 升序 |
 | 待验收 | Table | `status:Verifying` | 按 Updated 升序 |
 | 阻塞 | Table 或 Board | `status:Blocked` | 按 Next owner 分组 |
-| 按 Owner | Board | `-status:Closed` | 按 Next owner 分组 |
-| 前端 | Table | `"Next owner":Frontend` | 按 Updated 降序 |
+| 状态板 | Board | `-status:Closed` | 按 Status 分组（默认）；需要 owner 列时 Group by Next owner |
 | 最近关闭 | Table | `status:Closed` | 按 Closed 降序 |
 
 快速按 owner 查看：
 
-- 点顶部 **前端** tab；
-- 其它角色在 filter bar 输入 `"Next owner":Backend` / `"Next owner":Product` /
-  `"Next owner":Data` / `"Next owner":Tester`；
-- **按 Owner** board 由 API 创建，公开 API 不暴露 `groupByFields`，所以它默认按 Status 分组；
-  在视图设置里把 **Group by** 设成 `Next owner` 一次即可。
+- 在任意视图的 filter bar 输入 `"Next owner":Frontend` / `"Next owner":Backend` /
+  `"Next owner":Product` / `"Next owner":Data` / `"Next owner":Tester`；
+- **状态板** 默认按 Status 分组；如果要 owner 列，在视图设置里把 **Group by** 设成
+  `Next owner`，再按需把视图改名为「按 Owner」。
   字段名带空格，filter 里要用引号：`"Next owner":Frontend`。
 
 > Projects 的公开 API 能创建 view 的名称/布局/可见字段/筛选，但**不暴露分组与排序**；

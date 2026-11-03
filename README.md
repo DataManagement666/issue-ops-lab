@@ -54,17 +54,16 @@
 | 当前状态 | Table | 全部 | 按 Status 分组；Priority 升序 |
 | 待验收 | Table | `status:Verifying` | 按 Updated 升序 |
 | 阻塞 | Table / Board | `status:Blocked` | 按 Next owner 分组 |
-| 按 Owner | Board | 排除 Closed | 按 Next owner 分组 |
-| 前端 | Table | `"Next owner":Frontend` | 按 Updated 降序 |
+| 状态板 | Board | `-status:Closed` | 按 Status 分组（默认）；需要 owner 列时 Group by Next owner |
 | 最近关闭 | Table | `status:Closed` | 按 Closed 降序 |
 
 快速按 owner 查看：
 
-- 点顶部 **前端** tab（已建好，filter 是 `"Next owner":Frontend`）；
-- 其它角色：在任意视图的 filter bar 输入
-  `"Next owner":Backend` / `"Next owner":Product` / `"Next owner":Data` / `"Next owner":Tester`；
-- **按 Owner** board 是用 API 建的，公开 API 不暴露 groupBy，所以默认按 Status 分组；
-  在视图设置里把 **Group by** 设成 `Next owner` 一次，就会变成 owner 列。
+- 在任意视图的 filter bar 输入
+  `"Next owner":Frontend` / `"Next owner":Backend` / `"Next owner":Product` /
+  `"Next owner":Data` / `"Next owner":Tester`；
+- **状态板** 默认按 Status 分组；如果要 owner 列，在视图设置里把 **Group by** 设成
+  `Next owner`，再按需把视图改名为「按 Owner」。
 
 > Projects 的公开 API 能建 view 的名称/布局/可见字段/筛选，但**不暴露分组与排序**；
 > 这些在 UI 里设置一次即可。
