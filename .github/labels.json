@@ -1,90 +1,5 @@
 [
   {
-    "name": "status/partial",
-    "color": "D4A72C",
-    "description": "一端完成、另一端未完成；配合 owner/* 指明缺口"
-  },
-  {
-    "name": "status/blocked",
-    "color": "CF222E",
-    "description": "外部依赖卡住；内部依赖优先用 blocked by 关系"
-  },
-  {
-    "name": "status/verifying",
-    "color": "8250DF",
-    "description": "开发完成、自检通过，等待测试/验收（替代 Fixed）"
-  },
-  {
-    "name": "verified",
-    "color": "1A7F37",
-    "description": "测试/验收方确认通过；completed 关闭的前置条件"
-  },
-  {
-    "name": "priority/P1",
-    "color": "B60205",
-    "description": "最高优先级"
-  },
-  {
-    "name": "priority/P2",
-    "color": "D93F0B",
-    "description": "次高优先级"
-  },
-  {
-    "name": "priority/P3",
-    "color": "FBCA04",
-    "description": "普通优先级"
-  },
-  {
-    "name": "owner/frontend",
-    "color": "0969DA",
-    "description": "下一动作：前端"
-  },
-  {
-    "name": "owner/backend",
-    "color": "1F883D",
-    "description": "下一动作：后端"
-  },
-  {
-    "name": "owner/product",
-    "color": "8250DF",
-    "description": "下一动作：产品"
-  },
-  {
-    "name": "owner/data",
-    "color": "0A3069",
-    "description": "下一动作：数据"
-  },
-  {
-    "name": "owner/tester",
-    "color": "9A6700",
-    "description": "下一动作：测试/验收方"
-  },
-  {
-    "name": "scope/user-api",
-    "color": "0E8A16",
-    "description": "影响用户侧 API"
-  },
-  {
-    "name": "scope/admin-api",
-    "color": "1D76DB",
-    "description": "影响管理后台 API"
-  },
-  {
-    "name": "scope/user-ui",
-    "color": "5319E7",
-    "description": "影响用户侧页面"
-  },
-  {
-    "name": "scope/admin-ui",
-    "color": "B60205",
-    "description": "影响管理后台页面"
-  },
-  {
-    "name": "scope/docs",
-    "color": "6E7781",
-    "description": "影响产品/接口文档口径"
-  },
-  {
     "name": "bug",
     "color": "D73A4A",
     "description": "缺陷"
@@ -125,23 +40,18 @@
     "description": "验收记录"
   },
   {
-    "name": "dashboard",
-    "color": "0E8A16",
-    "description": "看板/自动化相关，统计时排除"
-  },
-  {
     "name": "duplicate",
     "color": "CFD3D7",
-    "description": "重复 issue；允许不经 verified 关闭"
+    "description": "重复 issue；关闭时把 Project Status 设为 Not planned"
   },
   {
     "name": "invalid",
     "color": "E4E669",
-    "description": "无效 issue；允许不经 verified 关闭"
+    "description": "无效 issue；关闭时把 Project Status 设为 Not planned"
   },
   {
     "name": "wontfix",
     "color": "FFFFFF",
-    "description": "产品裁定不修复；允许不经 verified 关闭"
+    "description": "产品裁定不修复；关闭时把 Project Status 设为 Not planned"
   }
 ]

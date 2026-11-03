@@ -6,8 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        写清可复核的证据。状态、优先级、owner 由维护者/自动化用标签维护，不要写进标题。
-        状态模型见 [docs/ARCHITECTURE.md](https://github.com/DataManagement666/issue-ops-lab/blob/main/docs/ARCHITECTURE.md)。
+        写清可复核的证据。**状态、优先级、owner 由 Project 看板维护**，不要写进标题。
+        Project：https://github.com/users/DataManagement666/projects/1
 
   - type: dropdown
     id: environment
@@ -65,7 +65,7 @@ body:
   - type: dropdown
     id: scope
     attributes:
-      label: 影响范围（建议）
+      label: 影响范围（建议，提交后由维护者写入 Project 的 Scope 字段）
       multiple: true
       options:
         - User API
@@ -80,7 +80,7 @@ body:
   - type: dropdown
     id: priority
     attributes:
-      label: 优先级（建议）
+      label: 优先级（建议，提交后由维护者写入 Project 的 Priority 字段）
       options:
         - P1
         - P2

@@ -48,5 +48,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        「通过」后请由验收方在对应 issue 上添加 `verified` 标签，再关闭；
-        本表单本身不等于关闭依据。开发自测不算关闭。
+        「通过」后请由验收方把 Project 里对应 item 的 **Status 改为 Closed**；
+        「不通过」改回 Partial / Verifying，并在 issue 评论写清缺口。
+        本表单是证据记录，不是状态本身。
