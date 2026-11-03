@@ -37,7 +37,8 @@
 
 ## 怎么用
 
-1. 新 issue 进入仓库后，把它 Add items 进 Project（**Auto-add to project** 尚未启用，启用后这一步自动完成）；
+1. 新 issue 进入仓库后，由 Project 的 **Auto-add to project** 自动加入
+   （该 workflow 需要在 Project → Workflows 配置，配置前手动 Add items）；
 2. 在 Project 里设置 Status / Priority / Next owner，必要时补 Waiting on / Scope / Next step；
 3. 验收通过：测试/验收方把 Status 改为 **Closed**，再关闭 issue；
 4. 验收不通过：Status 改回 **Partial** 或 **Verifying**，在 issue 评论写清缺口；
@@ -72,15 +73,15 @@
 ## 自动化
 
 - **Auto-add to project**：仓库 `DataManagement666/issue-ops-lab` + `is:issue`；
-  当前已启用的内置列表里没有这一项，需要在 Project → Workflows 里添加并配置；
+  需要在 Project → Workflows 里添加并配置（UI 操作，API 只能列/删 workflow，不能建）；
 - **Item closed → Status Closed**：已启用，2026-11-03 用 #11 测试通过；
 - **Item reopened**：没有这个内置 workflow；重新打开时手动改回 Open / Partial / Verifying；
 - **Pull request merged**：已删除，避免合并自动把 Status 置为 Closed（合并 ≠ 验收通过）；
-- **Auto-close issue**：内置 workflow（新 Project 默认启用）——Status 变成配置的关闭值时自动关闭 issue；
-  本 Project 是否启用需在 Workflows UI 确认。启用后验收方把 Status 改为 Closed，issue 会自动关闭（第 3 步的「再关闭」自动完成）；
+- **Auto-close issue**：已通过 GraphQL 删除（2026-11-03）——Status 改为 Closed 不自动关闭 issue，
+  保持「先改 Status、再关 issue」两个独立动作；
 - **仓库级 PR 合并自动关闭**：Settings → General → Issues 的
-  "Auto-close issues with merged linked pull requests" 是仓库默认行为——PR 描述带 `closes`/`fixes` 关键词，合并后自动关闭 issue，
-  再经 Item closed 把 Status 置为 Closed，绕过验收 gate。应保持关闭该设置，PR 描述禁用 `closes`/`fixes` 关键词；
+  "Auto-close issues with merged linked pull requests" 保持关闭（UI 操作）；PR 描述禁用 `closes`/`fixes` 关键词，
+  否则合并会直接关闭 issue，再经 Item closed 把 Status 置为 Closed，绕过验收 gate；
 - 自定义 Action 需要 PAT / GitHub App：`GITHUB_TOKEN` 不能读写 Projects v2。
   当前只用 Projects 内置 workflow，不引入 PAT。
 
@@ -92,6 +93,7 @@
 - 5 个视图已通过 GraphQL 创建，筛选已设置；分组/排序需在 UI 里设置一次；
 - 6 个不在 manifest 的默认标签（`accessibility` / `documentation` / `enhancement` /
   `good first issue` / `help wanted` / `question`）已删除，线上标签与 `.github/labels.json` 一致；
+- `Auto-close issue` workflow 已通过 GraphQL 删除，Status 改为 Closed 不再自动关闭 issue；
 - `Waiting on` / `Scope` 多选字段已存在于 Project，选项与文档一致
   （注意：`gh project field-list` 不显示 multi-select 字段，查字段要用 GraphQL）。
 

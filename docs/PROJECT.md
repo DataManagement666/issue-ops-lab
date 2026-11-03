@@ -45,16 +45,16 @@ Project：https://github.com/users/DataManagement666/projects/1
 Project → 右上角 `...` → **Workflows**：
 
 - **Auto-add to project**：`repo:DataManagement666/issue-ops-lab is:issue`；
-  当前已启用列表里没有这一项，需要在 UI 里添加并配置
+  需要在 UI 里添加并配置（workflow 的 API 只能列/删，不能建）
 - **Item closed**：已启用；测试通过（#11 关闭后 Status 自动变 Closed）
 - **Item reopened**：没有这个内置 workflow；重新打开时手动改回 Open / Partial / Verifying
 - **Pull request merged**：已通过 GraphQL 删除——合并不等于验收通过
-- **Auto-close issue**：Status 变成配置的关闭值时自动关闭 issue（新 Project 默认启用）；
-  本 Project 是否启用需在 UI 确认。启用后验收方把 Status 改为 Closed，issue 自动关闭
+- **Auto-close issue**：已通过 GraphQL 删除（2026-11-03）——Status 改为 Closed 不自动关闭 issue，
+  保持「先改 Status、再关 issue」两步
 - **Auto-add sub-issues** / **Item added to project** / **Pull request linked to issue**：保留默认
 - **Auto-archive**：按需
 - **仓库级 PR 合并自动关闭**：Settings → General → Issues 的
-  "Auto-close issues with merged linked pull requests" 保持关闭；PR 描述禁用 `closes`/`fixes` 关键词，
+  "Auto-close issues with merged linked pull requests" 保持关闭（UI 操作）；PR 描述禁用 `closes`/`fixes` 关键词，
   否则合并会直接关闭 issue 并经 Item closed 把 Status 置为 Closed，绕过验收 gate
 
 自定义 Action 需要 PAT / GitHub App；`GITHUB_TOKEN` 不能访问 Projects v2。
@@ -118,6 +118,7 @@ docs/PROJECT.md
 - 2026-11-03：关闭 #11 → Project Status 自动从 Open 变 Closed（Item closed workflow）；
 - 重新打开 #11 → Status 保持 Closed，手动改回 Open（没有 Item reopened workflow）；
 - `Pull request merged` workflow 已删除，避免合并自动置 Closed；
+- `Auto-close issue` workflow 已通过 GraphQL 删除；workflow API 只能列/删，不能建（Auto-add 需 UI 配置）；
 - 5 个视图已通过 GraphQL 创建，filter 已设置；groupBy/sortBy 不在公开 API 里，需在 UI 设置；
 - 6 个不在 manifest 的默认标签已删除，线上标签与 `labels.json` 一致；
 - `Waiting on` / `Scope` 多选字段已在 Project 上，选项与文档一致
