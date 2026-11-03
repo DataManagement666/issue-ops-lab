@@ -2,88 +2,8 @@
   "title": "Issue Ops Lab — 状态看板",
   "repo": "DataManagement666/issue-ops-lab",
   "repoUrl": "https://github.com/DataManagement666/issue-ops-lab",
-  "dataAsOf": "2026-11-03 08:35 UTC",
+  "dataAsOf": "2026-11-03 08:36 UTC",
   "issues": [
-    {
-      "number": 4,
-      "title": "[FCN][路由] ?tab=holdings 深链接未选中持仓页",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/4",
-      "state": "open",
-      "stateReason": null,
-      "status": "Verifying",
-      "priority": "P2",
-      "owners": [
-        "Tester"
-      ],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/verifying",
-        "priority/P2",
-        "owner/tester",
-        "scope/user-ui",
-        "frontend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": false,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:06:07Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 7,
-      "search": "4 [fcn][路由] ?tab=holdings 深链接未选中持仓页 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
-    },
-    {
-      "number": 3,
-      "title": "[FCN][持仓] 已到期待兑付订单显示负数剩余天数",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/3",
-      "state": "open",
-      "stateReason": null,
-      "status": "Verifying",
-      "priority": "P2",
-      "owners": [
-        "Tester"
-      ],
-      "scopes": [
-        "User UI"
-      ],
-      "labels": [
-        "bug",
-        "status/verifying",
-        "priority/P2",
-        "owner/tester",
-        "scope/user-ui",
-        "frontend",
-        "FCN"
-      ],
-      "displayLabels": [
-        "bug",
-        "frontend",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": false,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:05:59Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 7,
-      "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug status/verifying priority/p2 owner/tester scope/user-ui frontend fcn tester user ui"
-    },
     {
       "number": 8,
       "title": "[FCN][钱包] 申购中钱包余额与分币种余额口径",
@@ -199,46 +119,6 @@
       "search": "9 [fcn][对账] 兑付完成后无 reconcile run 记录 status/blocked priority/p1 owner/backend scope/admin-api backend admin fcn backend admin api"
     },
     {
-      "number": 5,
-      "title": "[FCN][管理后台] 划转入口与 FCN 拨款不一致",
-      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/5",
-      "state": "open",
-      "stateReason": null,
-      "status": "Blocked",
-      "priority": "P1",
-      "owners": [
-        "Product"
-      ],
-      "scopes": [
-        "Admin API"
-      ],
-      "labels": [
-        "status/blocked",
-        "priority/P1",
-        "owner/product",
-        "scope/admin-api",
-        "backend",
-        "admin",
-        "FCN"
-      ],
-      "displayLabels": [
-        "backend",
-        "admin",
-        "FCN"
-      ],
-      "assignees": [],
-      "verified": false,
-      "closedWithoutVerification": false,
-      "unowned": false,
-      "conflict": false,
-      "updatedAt": "2026-11-03T08:05:45Z",
-      "updatedDate": "2026-11-03",
-      "ageDays": 0,
-      "stale": false,
-      "staleDays": 14,
-      "search": "5 [fcn][管理后台] 划转入口与 fcn 拨款不一致 status/blocked priority/p1 owner/product scope/admin-api backend admin fcn product admin api"
-    },
-    {
       "number": 11,
       "title": "[Lab] 关闭 gate 测试",
       "url": "https://github.com/DataManagement666/issue-ops-lab/issues/11",
@@ -266,6 +146,102 @@
       "stale": false,
       "staleDays": 30,
       "search": "11 [lab] 关闭 gate 测试 bug priority/p3  "
+    },
+    {
+      "number": 5,
+      "title": "[FCN][管理后台] 划转入口与 FCN 拨款不一致",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/5",
+      "state": "open",
+      "stateReason": null,
+      "status": "Open",
+      "priority": null,
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "backend",
+        "admin",
+        "FCN"
+      ],
+      "displayLabels": [
+        "backend",
+        "admin",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:36:15Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "5 [fcn][管理后台] 划转入口与 fcn 拨款不一致 backend admin fcn  "
+    },
+    {
+      "number": 4,
+      "title": "[FCN][路由] ?tab=holdings 深链接未选中持仓页",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/4",
+      "state": "open",
+      "stateReason": null,
+      "status": "Open",
+      "priority": null,
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:36:10Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "4 [fcn][路由] ?tab=holdings 深链接未选中持仓页 bug frontend fcn  "
+    },
+    {
+      "number": 3,
+      "title": "[FCN][持仓] 已到期待兑付订单显示负数剩余天数",
+      "url": "https://github.com/DataManagement666/issue-ops-lab/issues/3",
+      "state": "open",
+      "stateReason": null,
+      "status": "Open",
+      "priority": null,
+      "owners": [],
+      "scopes": [],
+      "labels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "displayLabels": [
+        "bug",
+        "frontend",
+        "FCN"
+      ],
+      "assignees": [],
+      "verified": false,
+      "closedWithoutVerification": false,
+      "unowned": true,
+      "conflict": false,
+      "updatedAt": "2026-11-03T08:36:01Z",
+      "updatedDate": "2026-11-03",
+      "ageDays": 0,
+      "stale": false,
+      "staleDays": 30,
+      "search": "3 [fcn][持仓] 已到期待兑付订单显示负数剩余天数 bug frontend fcn  "
     },
     {
       "number": 2,
@@ -342,16 +318,11 @@
       "state": "closed",
       "stateReason": "completed",
       "status": "Closed",
-      "priority": "P1",
+      "priority": null,
       "owners": [],
-      "scopes": [
-        "User UI"
-      ],
+      "scopes": [],
       "labels": [
         "bug",
-        "verified",
-        "priority/P1",
-        "scope/user-ui",
         "frontend",
         "backend",
         "FCN"
@@ -363,16 +334,16 @@
         "FCN"
       ],
       "assignees": [],
-      "verified": true,
-      "closedWithoutVerification": false,
+      "verified": false,
+      "closedWithoutVerification": true,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-03T08:05:47Z",
+      "updatedAt": "2026-11-03T08:36:22Z",
       "updatedDate": "2026-11-03",
       "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "6 [fcn][资产组合] 30 天资产走势未计入 btc 与 fcn bug verified priority/p1 scope/user-ui frontend backend fcn  user ui"
+      "search": "6 [fcn][资产组合] 30 天资产走势未计入 btc 与 fcn bug frontend backend fcn  "
     },
     {
       "number": 7,
@@ -381,15 +352,11 @@
       "state": "closed",
       "stateReason": "not_planned",
       "status": "Not planned",
-      "priority": "P3",
+      "priority": null,
       "owners": [],
-      "scopes": [
-        "User UI"
-      ],
+      "scopes": [],
       "labels": [
         "bug",
-        "priority/P3",
-        "scope/user-ui",
         "frontend",
         "FCN"
       ],
@@ -403,12 +370,12 @@
       "closedWithoutVerification": false,
       "unowned": false,
       "conflict": false,
-      "updatedAt": "2026-11-03T08:05:48Z",
+      "updatedAt": "2026-11-03T08:36:28Z",
       "updatedDate": "2026-11-03",
       "ageDays": 0,
       "stale": false,
       "staleDays": 30,
-      "search": "7 [fcn][报价] 报价有效期口径冲突 bug priority/p3 scope/user-ui frontend fcn  user ui"
+      "search": "7 [fcn][报价] 报价有效期口径冲突 bug frontend fcn  "
     }
   ],
   "statusMeta": {
